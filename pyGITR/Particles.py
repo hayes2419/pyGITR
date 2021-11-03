@@ -81,16 +81,13 @@ class Distribs():
 
     def PlotDistrib(cls, DistribName, **kwargs):
         """
-
-
         Args:
             cls (TYPE): DESCRIPTION.
             DistribName (TYPE): DESCRIPTION.
-            **kwargs (TYPE): DESCRIPTION.
+            \**kwargs (TYPE): DESCRIPTION.
 
         Returns:
             None.
-
         """
         if hasattr(cls, DistribName):
             f = getattr(cls,DistribName)
@@ -214,15 +211,12 @@ class ParticleDistribution():
 
     def Generate(self, Np, DistribName, **kwargs):
         """
-
-
         Args:
             Np (int, optional): Number fo samples. Defaults to 10000.
             DistribName (TYPE): Probability distribution function.
 
         Returns:
             Distribution (np.ndarray): distribution
-
         """
 
         x, pdf = Distribs.GetPdf(DistribName, **kwargs)
@@ -243,9 +237,6 @@ class ParticleDistribution():
             Var[k] = File.createVariable(k,'f8','nP')
             Var[k][:] = self.Particles[k]
         File.close()
-
-
-
 
 
 

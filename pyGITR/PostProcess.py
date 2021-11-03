@@ -1,4 +1,4 @@
-import electronvolt_num as units
+import electronvolt as units
 import numpy as np
 from matplotlib import pyplot as plt
 from netCDF4 import Dataset

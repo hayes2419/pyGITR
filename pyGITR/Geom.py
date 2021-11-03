@@ -20,7 +20,9 @@ from matplotlib import collections as mc
 from pyGITR.math_helper import *
 
 class GeomGroup():
-    '''Methods to handle groups of elements.'''
+    """
+    Methods to handle groups of elements.
+    """
 
     def ShowGroups(self):
         print('-- Groups --')

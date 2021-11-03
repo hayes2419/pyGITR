@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyGITR package &mdash; pyGITR  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> pyGITR
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">pyGITR package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pyGITR.Geom">pyGITR.Geom module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.Input">pyGITR.Input module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.Particles">pyGITR.Particles module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.PostProcess">pyGITR.PostProcess module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.Run">pyGITR.Run module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.gmsh_helper">pyGITR.gmsh_helper module</a></li>
+<li><a class="reference internal" href="#module-pyGITR.math_helper">pyGITR.math_helper module</a></li>
+<li><a class="reference internal" href="#module-pyGITR">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyGITR</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>pyGITR package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pyGITR.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pygitr-package">
+<h1>pyGITR package<a class="headerlink" href="#pygitr-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-pyGITR.Geom">
+<span id="pygitr-geom-module"></span><h2>pyGITR.Geom module<a class="headerlink" href="#module-pyGITR.Geom" title="Permalink to this headline"></a></h2>
+<p>Created on Mon Feb  1 20:10:56 2021</p>
+<p>&#64;author: guterl</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Geom.</span></span><span class="sig-name descname"><span class="pre">GeomGroup</span></span><a class="headerlink" href="#pyGITR.Geom.GeomGroup" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Methods to handle groups of elements.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomGroup.GetGroupElements">
+<span class="sig-name descname"><span class="pre">GetGroupElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomGroup.GetGroupElements" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomGroup.GetGroupIdx">
+<span class="sig-name descname"><span class="pre">GetGroupIdx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomGroup.GetGroupIdx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomGroup.GetGroups">
+<span class="sig-name descname"><span class="pre">GetGroups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomGroup.GetGroups" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomGroup.ShowGroups">
+<span class="sig-name descname"><span class="pre">ShowGroups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomGroup.ShowGroups" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Geom.</span></span><span class="sig-name descname"><span class="pre">GeomInput</span></span><a class="headerlink" href="#pyGITR.Geom.GeomInput" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyGITR.Geom.GeomGroup" title="pyGITR.Geom.GeomGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyGITR.Geom.GeomGroup</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.DefineDefaultAttributes">
+<span class="sig-name descname"><span class="pre">DefineDefaultAttributes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.DefineDefaultAttributes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.LoadElemsAttr">
+<span class="sig-name descname"><span class="pre">LoadElemsAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.LoadElemsAttr" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate properties of triagular elements.
+Triangle: N x 3 x 3 numpy array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.SetAttr">
+<span class="sig-name descname"><span class="pre">SetAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.SetAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.SetDefaultsAttr">
+<span class="sig-name descname"><span class="pre">SetDefaultsAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GeoDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'3D'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.SetDefaultsAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.SetElemAttr">
+<span class="sig-name descname"><span class="pre">SetElemAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.SetElemAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.SetInputPoints">
+<span class="sig-name descname"><span class="pre">SetInputPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GeoDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'3D'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.SetInputPoints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomInput.ShowDefaultsAttr">
+<span class="sig-name descname"><span class="pre">ShowDefaultsAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GeoDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'3D'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomInput.ShowDefaultsAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Geom.</span></span><span class="sig-name descname"><span class="pre">GeomPlot</span></span><a class="headerlink" href="#pyGITR.Geom.GeomPlot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyGITR.Geom.GeomGroup" title="pyGITR.Geom.GeomGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyGITR.Geom.GeomGroup</span></code></a></p>
+<p>Subclass for plotting methods.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot.Plot">
+<span class="sig-name descname"><span class="pre">Plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomPlot.Plot" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot.PlotTriangles">
+<span class="sig-name descname"><span class="pre">PlotTriangles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'viridis'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ElemAttr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EdgeColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'k'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FaceColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomPlot.PlotTriangles" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot.SetAxisLim">
+<span class="sig-name descname"><span class="pre">SetAxisLim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomPlot.SetAxisLim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot.ShowCentroids">
+<span class="sig-name descname"><span class="pre">ShowCentroids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomPlot.ShowCentroids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomPlot.ShowNormals">
+<span class="sig-name descname"><span class="pre">ShowNormals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GroupID</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.002</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'b'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomPlot.ShowNormals" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Geom.</span></span><span class="sig-name descname"><span class="pre">GeomSetup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomSetup" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyGITR.Geom.GeomInput" title="pyGITR.Geom.GeomInput"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyGITR.Geom.GeomInput</span></code></a>, <a class="reference internal" href="#pyGITR.Geom.GeomPlot" title="pyGITR.Geom.GeomPlot"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyGITR.Geom.GeomPlot</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup.CheckGeomInput">
+<span class="sig-name descname"><span class="pre">CheckGeomInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GeoDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'3D'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomSetup.CheckGeomInput" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup.ConvertGeomInput">
+<span class="sig-name descname"><span class="pre">ConvertGeomInput</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomSetup.ConvertGeomInput" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup.ImportMesh">
+<span class="sig-name descname"><span class="pre">ImportMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomSetup.ImportMesh" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup.ImportMeshElements">
+<span class="sig-name descname"><span class="pre">ImportMeshElements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyGITR.Geom.GeomSetup.ImportMeshElements" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Geom.GeomSetup.WriteGeomFile">
+<span class="sig-name descname"><span class="pre">WriteGeomFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gitrGeom.cfg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GeoDim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'3D'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OverWrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Geom.GeomSetup.WriteGeomFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyGITR.Input">
+<span id="pygitr-input-module"></span><h2>pyGITR.Input module<a class="headerlink" href="#module-pyGITR.Input" title="Permalink to this headline"></a></h2>
+<p>Created on Thu Feb 18 19:57:04 2021</p>
+<p>&#64;author: guterl</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Input.Input">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Input.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><a class="headerlink" href="#pyGITR.Input.Input" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.CompileGITR">
+<span class="sig-name descname"><span class="pre">CompileGITR</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.CompileGITR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetBField">
+<span class="sig-name descname"><span class="pre">SetBField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Br</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">By</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Bt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetBField" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetBackgroundPlasmaProfiles">
+<span class="sig-name descname"><span class="pre">SetBackgroundPlasmaProfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Voltage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetBackgroundPlasmaProfiles" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetDiagnostics">
+<span class="sig-name descname"><span class="pre">SetDiagnostics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetDiagnostics" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetFlags">
+<span class="sig-name descname"><span class="pre">SetFlags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetFlags" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetGeometryFile">
+<span class="sig-name descname"><span class="pre">SetGeometryFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetGeometryFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetParticleSource">
+<span class="sig-name descname"><span class="pre">SetParticleSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Zmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetParticleSource" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetSurfaces">
+<span class="sig-name descname"><span class="pre">SetSurfaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Emin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Emax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Amin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Amax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">90</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetSurfaces" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.SetTimeStep">
+<span class="sig-name descname"><span class="pre">SetTimeStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nPtsPerGyroOrbit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.SetTimeStep" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Input.Input.WriteInputFile">
+<span class="sig-name descname"><span class="pre">WriteInputFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gitrInput.cfg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OverWrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Input.Input.WriteInputFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyGITR.Particles">
+<span id="pygitr-particles-module"></span><h2>pyGITR.Particles module<a class="headerlink" href="#module-pyGITR.Particles" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Particles.</span></span><span class="sig-name descname"><span class="pre">Distribs</span></span><a class="headerlink" href="#pyGITR.Particles.Distribs" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.Gaussian">
+<span class="sig-name descname"><span class="pre">Gaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.Gaussian" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.GenerateDistribution">
+<span class="sig-name descname"><span class="pre">GenerateDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.GenerateDistribution" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.GetPdf">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">GetPdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">f:</span> <span class="pre">str</span></em>, <em class="sig-param"><span class="pre">**kwargs)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'numpy.ndarray'&gt;</span></em>, <em class="sig-param"><span class="pre">&lt;class</span> <span class="pre">'numpy.ndarray'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.GetPdf" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.PlotDistrib">
+<span class="sig-name descname"><span class="pre">PlotDistrib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DistribName</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.PlotDistrib" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cls</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>DistribName</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+<li><p><strong>**kwargs</strong> (<em>TYPE</em>) – DESCRIPTION.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.ShowAvailablePdfs">
+<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">ShowAvailablePdfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.ShowAvailablePdfs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.SinCos">
+<span class="sig-name descname"><span class="pre">SinCos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.SinCos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.Thomson">
+<span class="sig-name descname"><span class="pre">Thomson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xb</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8.64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.Thomson" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.Distribs.Uniform">
+<span class="sig-name descname"><span class="pre">Uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.Distribs.Uniform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Particles.</span></span><span class="sig-name descname"><span class="pre">ParticleDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Np</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ListAttr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['x',</span> <span class="pre">'y',</span> <span class="pre">'z',</span> <span class="pre">'vx',</span> <span class="pre">'vy',</span> <span class="pre">'vz']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.AddAttr">
+<span class="sig-name descname"><span class="pre">AddAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.AddAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.CheckParticles">
+<span class="sig-name descname"><span class="pre">CheckParticles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.CheckParticles" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.Generate">
+<span class="sig-name descname"><span class="pre">Generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Np</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DistribName</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.Generate" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Np</strong> (<em>int</em><em>, </em><em>optional</em>) – Number fo samples. Defaults to 10000.</p></li>
+<li><p><strong>DistribName</strong> (<em>TYPE</em>) – Probability distribution function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distribution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Distribution (np.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.PlotAttr">
+<span class="sig-name descname"><span class="pre">PlotAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NewFig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.PlotAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.Rotate">
+<span class="sig-name descname"><span class="pre">Rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Field</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AxisVector</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.Rotate" title="Permalink to this definition"></a></dt>
+<dd><p>Rotate the vector field (x,y,z) or (vx,vy,vz) around the axis AxisVector by angle Angle</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Field</strong> (<em>str</em>) – DESCRIPTION.</p></li>
+<li><p><strong>AxisVector</strong> (<em>np.ndarray</em><em> or </em><em>list</em>) – DESCRIPTION.</p></li>
+<li><p><strong>Angle</strong> (<em>float</em>) – DESCRIPTION.</p></li>
+<li><p><strong>Degree</strong> (<em>TYPE</em><em>, </em><em>optional</em>) – if True, angle are in degree. Defaults to True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DESCRIPTION.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.RotateAngle">
+<span class="sig-name descname"><span class="pre">RotateAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Field</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.RotateAngle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.ScaleAttr">
+<span class="sig-name descname"><span class="pre">ScaleAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ScaleFactor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.ScaleAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.SetAttr">
+<span class="sig-name descname"><span class="pre">SetAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Attr</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.SetAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.ShowAttr">
+<span class="sig-name descname"><span class="pre">ShowAttr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.ShowAttr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.ShowAvailablePdfs">
+<span class="sig-name descname"><span class="pre">ShowAvailablePdfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.ShowAvailablePdfs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Particles.ParticleDistribution.WriteParticleFile">
+<span class="sig-name descname"><span class="pre">WriteParticleFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'f8'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'input'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Particles.ParticleDistribution.WriteParticleFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyGITR.PostProcess">
+<span id="pygitr-postprocess-module"></span><h2>pyGITR.PostProcess module<a class="headerlink" href="#module-pyGITR.PostProcess" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.GetDistribParticle">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">GetDistribParticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ParticleData</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.GetDistribParticle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.GetDistribSurface">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">GetDistribSurface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SurfaceData</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.GetDistribSurface" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.GetHistoryParticle">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">GetHistoryParticle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ParticleData</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.GetHistoryParticle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.ImportHistoryData">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">ImportHistoryData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output/history.nc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.ImportHistoryData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.ImportParticleData">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">ImportParticleData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output/particleSource_end.nc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.ImportParticleData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.ImportSurfaceData">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">ImportSurfaceData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output/surface.nc'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.ImportSurfaceData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.LoadData">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">LoadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.LoadData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PlotEEnd">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">PlotEEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PlotEEnd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PlotEStart">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">PlotEStart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PlotEStart" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PlotEStartEnd">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">PlotEStartEnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sim</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PlotEStartEnd" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PlotHistory">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">PlotHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Sim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PlotHistory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">PostProcess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Simulations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess.CumulateParticleData">
+<span class="sig-name descname"><span class="pre">CumulateParticleData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess.CumulateParticleData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess.GetHistoryData">
+<span class="sig-name descname"><span class="pre">GetHistoryData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess.GetHistoryData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess.GetParticleData">
+<span class="sig-name descname"><span class="pre">GetParticleData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess.GetParticleData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess.GetSurfaceData">
+<span class="sig-name descname"><span class="pre">GetSurfaceData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NETCDF4'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess.GetSurfaceData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.PostProcess.PlotArray">
+<span class="sig-name descname"><span class="pre">PlotArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">GetData</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.PostProcess.PlotArray" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.PostProcess.SurfaceAngle">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.PostProcess.</span></span><span class="sig-name descname"><span class="pre">SurfaceAngle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sim</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.PostProcess.SurfaceAngle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyGITR.Run">
+<span id="pygitr-run-module"></span><h2>pyGITR.Run module<a class="headerlink" href="#module-pyGITR.Run" title="Permalink to this headline"></a></h2>
+<p>Created on Wed Apr 14 20:37:20 2021</p>
+<p>&#64;author: jguterl</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyGITR.Run.Run">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyGITR.Run.</span></span><span class="sig-name descname"><span class="pre">Run</span></span><a class="headerlink" href="#pyGITR.Run.Run" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SimManager.SimulationManager</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.AddParamScan">
+<span class="sig-name descname"><span class="pre">AddParamScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ConfigFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.AddParamScan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.ApplyModifyParam">
+<span class="sig-name descname"><span class="pre">ApplyModifyParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AddParam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.ApplyModifyParam" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.Clean">
+<span class="sig-name descname"><span class="pre">Clean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">OutputDirectory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'output'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.Clean" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.DumpMethod">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">DumpMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Config</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyGITR.Run.Run.DumpMethod" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.LoadMethod">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">LoadMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FilePath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#pyGITR.Run.Run.LoadMethod" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.ModifParam">
+<span class="sig-name descname"><span class="pre">ModifParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ConfigFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.ModifParam" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetGITRExec">
+<span class="sig-name descname"><span class="pre">SetGITRExec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ExecPath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.SetGITRExec" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetModifParam">
+<span class="sig-name descname"><span class="pre">SetModifParam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ConfigFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AddParam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.SetModifParam" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetParamScan">
+<span class="sig-name descname"><span class="pre">SetParamScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ConfigFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.SetParamScan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetReferenceDirectory">
+<span class="sig-name descname"><span class="pre">SetReferenceDirectory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ReferenceDirectory</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyGITR.Run.Run.SetReferenceDirectory" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetSimRootPath">
+<span class="sig-name descname"><span class="pre">SetSimRootPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SimRootPath</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyGITR.Run.Run.SetSimRootPath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.SetupScan">
+<span class="sig-name descname"><span class="pre">SetupScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">OverWrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'value'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AddParam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.SetupScan" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyGITR.Run.Run.ShowSummary">
+<span class="sig-name descname"><span class="pre">ShowSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ShowAll</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.Run.Run.ShowSummary" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyGITR.gmsh_helper">
+<span id="pygitr-gmsh-helper-module"></span><h2>pyGITR.gmsh_helper module<a class="headerlink" href="#module-pyGITR.gmsh_helper" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.gmsh_helper.SetGroups">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.gmsh_helper.</span></span><span class="sig-name descname"><span class="pre">SetGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.gmsh_helper.SetGroups" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyGITR.math_helper">
+<span id="pygitr-math-helper-module"></span><h2>pyGITR.math_helper module<a class="headerlink" href="#module-pyGITR.math_helper" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.Cross">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">Cross</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.Cross" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.Dot">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">Dot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.Dot" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.Integrale">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">Integrale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Array</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.Integrale" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.Norm">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">Norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Vector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.Norm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.PlotVector">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">PlotVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">V</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.PlotVector" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.RotateCoordinates">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">RotateCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AxisVector</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.RotateCoordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyGITR.math_helper.RotateVector">
+<span class="sig-prename descclassname"><span class="pre">pyGITR.math_helper.</span></span><span class="sig-name descname"><span class="pre">RotateVector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AxisVector</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Angle</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Degree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyGITR.math_helper.RotateVector" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-pyGITR">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyGITR" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Alyssa Hayes and Jerome Guterl.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
