@@ -44,11 +44,11 @@ class PostProcess():
             assert all([S.Parameters == self.Simulations[0].Parameters for S in Simulations] )
             for S in self.Simulations:
                 S.DicParameters = dict((k,v) for k,v in zip(S.Parameters,S.Values))
-            
+
             self.Parameters = self.Simulations[0].Parameters
             self.DicParameters = dict((k,list(set([S.DicParameters[k] for S in self.Simulations]))) for k in self.Parameters)
 
-            
+
         else:
             self.Parameters = []
 
@@ -102,7 +102,7 @@ class PostProcess():
                 GetData(self.ax[i,j],Sim, **kwargs)
                 Str = ' \n '.join(["{}={}".format(p,v) for (p,v) in zip(Sim.Parameters, Sim.Values)])
                 self.ax[i,j].set_title(Str, loc='center', wrap=True)
-                
+
     def CumulateParticleData(self):
         if not hasattr(self, 'CumulativeData'):
             self.CumulativeData = {}
@@ -226,26 +226,20 @@ def GetHistoryParticle(ParticleData):
 # ax = fig.add_subplot(111, projection='3d')
 # for i in range(0,nP):
 #     ax.plot(x[i,:],y[i,:],z[i,:])
+
 def PlotEStart(ax,Sim):
-    E= rget(Sim.Data,['ParticleStartData','Data','E'])
+    E = rget(Sim.Data,['ParticleStartData','Data','E'])
     ax.hist(E)
     ax.set_xlabel('E[eV]')
 
 def PlotEEnd(ax,Sim):
-    E= rget(Sim.Data,['ParticleStartData','Data','E'])
+    E = rget(Sim.Data,['ParticleEndData','Data','E'])
     ax.hist(E)
     ax.set_xlabel('E[eV]')
 
 def PlotEStartEnd(ax,Sim,**kwargs):
     Estart= rget(Sim.Data,['ParticleStartData','Data','E'])
-    Eend= rget(Sim.Data,['ParticleEndData','Data','E'])
-    ax.hist(Estart,**kwargs)
-    ax.hist(Eend,**kwargs)
-    ax.set_xlabel('E[eV]')
-
-def PlotEStartEnd(ax,Sim,**kwargs):
-    Estart = rget(Sim.Data,['ParticleStartData','Data','E'])
-    Eend= rget(Sim.Data,['ParticleEndData','Data','E'])
+    Eend = rget(Sim.Data,['ParticleEndData','Data','E'])
     ax.hist(Estart,**kwargs)
     ax.hist(Eend,**kwargs)
     ax.set_xlabel('E[eV]')
