@@ -2,12 +2,12 @@ import electronvolt as units
 import numpy as np
 from matplotlib import pyplot as plt
 from netCDF4 import Dataset
-plt.ion()
-FileNameSurface='/home/jguterl/Dropbox/python/pyGITR/examples/large_box4/output/surface.nc'
-FileNameParticle='/home/jguterl/Dropbox/python/pyGITR/examples/large_box4/output/particleSource.nc'
+#plt.ion()
 import netCDF4
 import os
+import sys
 from SimManager import rget
+
 
 class PostProcess():
     def __init__(self, Simulations = None, **kwargs):
@@ -17,7 +17,6 @@ class PostProcess():
             Simulations = Simulations.tolist()
         if type(Simulations) != list:
             Simulations = [Simulations]
-
 
         self.Simulations = Simulations
         self.SurfaceFile = 'output/surface.nc'
@@ -47,7 +46,6 @@ class PostProcess():
 
             self.Parameters = self.Simulations[0].Parameters
             self.DicParameters = dict((k,list(set([S.DicParameters[k] for S in self.Simulations]))) for k in self.Parameters)
-
 
         else:
             self.Parameters = []
@@ -173,6 +171,10 @@ def GetHistoryParticle(ParticleData):
         Data[k] = np.array(ParticleData.variables.get(k))
     return Data
 
+
+#FileNameSurface='/home/jguterl/Dropbox/python/pyGITR/examples/micro-trenches/output/surface.nc'
+#FileNameParticle='/home/jguterl/Dropbox/python/pyGITR/examples/micro-trenches/output/particleSource.nc'
+
 # class PostProcess():
 #     def __init__(self):
 #         pass
@@ -260,3 +262,6 @@ def PlotHistory(Sim):
         ax.plot(x[i,:],y[i,:],z[i,:])
         ax.set_xlabel('x')
         ax.set_ylabel('y')
+        
+if __name__ == "__main__":
+    PostProcess()

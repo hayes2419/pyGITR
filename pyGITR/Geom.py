@@ -208,11 +208,17 @@ class GeomInput(GeomGroup):
 class GeomPlot(GeomGroup):
     '''Subclass for plotting methods.'''
 
-    def PlotTriangles(self, GroupID=None, ax=None, cmap_name='viridis', ElemAttr=None, Alpha=0.1, EdgeColor='k', FaceColor='b'):
+    def PlotTriangles(self, GroupID=None, fig=None, ax=None, cmap_name='viridis', ElemAttr=None, Alpha=0.1, EdgeColor='k', FaceColor='b'):
+        # if ax is None:
+        #     ax = self.ax
+        # if ax is None:
+        #     ax = plt.gca()
+        
+        if fig is None:
+            fig = plt.figure()
         if ax is None:
-            ax = self.ax
-        if ax is None:
-            ax = plt.gca()
+           ax = fig.add_subplot(111, projection='3d')
+        
         cmap = mpl.cm.get_cmap(cmap_name)               # Get colormap by name
         # c = cmap(mpl.colors.Normalize(vmin, vmax)(v))   # Normalize value and get color
         Idx = self.GetGroupIdx(GroupID)

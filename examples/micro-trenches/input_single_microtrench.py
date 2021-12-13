@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import electronvolt_num as units
+import electronvolt as units
 import pyGITR
 import numpy as np
 from single_microtrench  import Lxbc,Lybc
@@ -22,9 +22,9 @@ V= -60
 Te = 25
 Ti = Te
 Timp = Te
-vthi = np.sqrt(units.eV*Ti/units.mp/mi)
-vimp = np.sqrt(units.eV*Ti/units.mp/Mimp)
-cs = np.sqrt(units.eV*2*Ti/units.mp/mi)
+vthi = np.sqrt((units.eV*Ti/units.mp/mi).value)
+vimp = np.sqrt((units.eV*Ti/units.mp/Mimp).value)
+cs = np.sqrt((units.eV*2*Ti/units.mp/mi).value)
 
 
 
@@ -117,6 +117,7 @@ Input.Input['flags'] = {
 
 Input.WriteInputFile(Folder='input', OverWrite=True)
 #%%
+print('Running')
 Run = pyGITR.Run()
 Run.Verbose = True
 
@@ -134,6 +135,7 @@ Run.Clean()
 Run.LaunchBatch()
 
 #%%
+print('PostProcess')
 from pyGITR.PostProcess import *
 Post = PostProcess(Run.CurrentSimu)
 Post.PlotArray(PlotEStartEnd ,alpha=0.2)

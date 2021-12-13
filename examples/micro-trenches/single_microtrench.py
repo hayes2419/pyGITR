@@ -157,7 +157,8 @@ gmsh.write("single_micro-trench.msh")
 # close gmsh session
 gmsh.finalize()
 # Load geometry
-g = GeomSetup('single_micro-trench.msh', Verbose=True)
+#g = GeomSetup('single_micro-trench.msh', Verbose=True)
+g = GeomSetup('micro-trenches_DiMES.msh')
 
 # Show existing groups
 g.ShowGroups()
