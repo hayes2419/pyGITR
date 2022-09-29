@@ -2,7 +2,8 @@
 
 
 import numpy as np
-from pyGITR.math_helper import *
+#from pyGITR.math_helper import *
+from math_helper import *
 from typing import Callable
 import matplotlib.pyplot as plt
 import pydoc
@@ -106,7 +107,7 @@ class Distribs():
             print('Distribution: {}'.format(pydoc.render_doc(getattr(cls,D), "%s")))
 
     def GenerateDistribution(x:np.ndarray ,pdf:np.ndarray, N:int=10000):
-        assert type(N) == int and N>0, "Nsamples must be an integer > 0. N={}".format(N)
+        assert type(N) == int #and N>0, "Nsamples must be an integer > 0. N={}".format(N)
         assert type(x) == np.ndarray and type(pdf) == np.ndarray, " x and pdf must be a numpy array"
         assert x.shape == pdf.shape, " x and pdf must have the same shape.:x.shape={}; pdf.shape={}".format(x.shape,pdf,shape)
         return x[np.searchsorted(Integrale(pdf, x, Normalized=True), np.random.rand(N), side='left')]
